@@ -11,7 +11,12 @@ const ui ={
         catch{
             alert('Erro ao redenrizar pensamentos')
         }
+
     },
+    limparFormulario() {
+        document.getElementById("pensamento-form").reset();
+      },
+    
 
     adicionarPensamentoNaLista(pensamento){
         const listaPensamentos = document.getElementById("lista-pensamentos")
@@ -37,6 +42,7 @@ const ui ={
         li.appendChild(pensamentoAutoria)
         listaPensamentos.appendChild(li)
     }
+    
 }
 
 export default ui;

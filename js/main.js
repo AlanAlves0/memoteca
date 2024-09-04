@@ -22,3 +22,19 @@ async function manipularSubmissaoFormulario(event) {
         alert("Erro ao salvar pensamento")
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    ui.redenrizarPensamentos()
+  
+    const formularioPensamento = document.getElementById("pensamento-form")
+    const botaoCancelar = document.getElementById("botao-cancelar")
+  
+    formularioPensamento.addEventListener("submit", manipularSubmissaoFormulario)
+    botaoCancelar.addEventListener("click", manipularCancelamento)
+  })
+  
+  //código omitido
+  
+  function manipularCancelamento() {
+    ui.limparFormulario();
+  }
